@@ -69,4 +69,54 @@ from netflix import Movie
 
 movie = Movie("80047616")
 
+print(movie.metadata)
+"""
+{
+  '@context': 'http://schema.org',
+  '@type': 'Movie',
+  'url': 'https://www.netflix.com/tr-en/title/80047616',
+  'contentRating': '16+',
+  'name': 'The Intern',
+  'description': 'Harried fashion entrepreneur Jules gets a surprise boost from Ben, a 70-year-old widower who answers an ad seeking a senior intern.',
+  'genre': 'Comedies',
+  'image': 'https://occ-0-2773-2774.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABW8TwHJmfYqEjUj0YK4Y2ugq-sKIN-Gi8OBaDjOh3SbRSBdbEXlmpWEpHTbrO2CLDdo7yxRl7MTm5YtYa1-71Kg1o-7o.jpg?r=2ce',
+  'dateCreated': '2019-8-31',
+  'actors': [{
+    '@type': 'Person',
+    'name': 'Robert De Niro'
+  }, {
+    '@type': 'Person',
+    'name': 'Anne Hathaway'
+  }, {
+    '@type': 'Person',
+    'name': 'Rene Russo'
+  }, {
+    '@type': 'Person',
+    'name': 'Anders Holm'
+  }, {
+    '@type': 'Person',
+    'name': 'JoJo Kushner'
+  }, {
+    '@type': 'Person',
+    'name': 'Andrew Rannells'
+  }, {
+    '@type': 'Person',
+    'name': 'Adam Devine'
+  }, {
+    '@type': 'Person',
+    'name': 'Zack Pearlman'
+  }, {
+    '@type': 'Person',
+    'name': 'Jason Orley'
+  }, {
+    '@type': 'Person',
+    'name': 'Christina Scherer'
+  }],
+  'creator': [],
+  'director': [{
+    '@type': 'Person',
+    'name': 'Nancy Meyers'
+  }]
+}
+"""
 ```

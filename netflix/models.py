@@ -13,7 +13,6 @@ class Movie:
         self.description = None
         self.genre = None
         self.image_url = None
-        self.content_rating = None
         self.metadata = None
 
         if fetch_instantly:
@@ -24,6 +23,9 @@ class Movie:
 
     def __str__(self):
         return self.name if self.name else self.netflix_id
+
+    def __repr__(self):
+        return "<Netflix Movie: {name}>".format(name=self.__str__())
 
     def fetch(self):
         url = "https://www.netflix.com/watch/{netflix_id}".format(netflix_id=self.netflix_id)
@@ -40,7 +42,6 @@ class Movie:
         self.description = metadata["description"]
         self.genre = metadata["genre"]
         self.image_url = metadata["image"]
-        self.content_rating = self.metadata["contentRating"]
 
         self.metadata = metadata
 
@@ -54,7 +55,6 @@ class TVShow:
         self.description = None
         self.genre = None
         self.image_url = None
-        self.content_rating = None
         self.metadata = None
 
         if fetch_instantly:
@@ -64,7 +64,10 @@ class TVShow:
             self.is_fetched = False
 
     def __str__(self):
-        return f'{self.name}'
+        return self.name if self.name else self.netflix_id
+
+    def __repr__(self):
+        return "<Netflix TVShow: {name}>".format(name=self.__str__())
 
     def fetch(self):
         url = "https://www.netflix.com/watch/{netflix_id}".format(netflix_id=self.netflix_id)
@@ -81,6 +84,5 @@ class TVShow:
         self.description = metadata["description"]
         self.genre = metadata["genre"]
         self.image_url = metadata["image"]
-        self.content_rating = self.metadata["contentRating"]
 
         self.metadata = metadata
