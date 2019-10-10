@@ -4,6 +4,12 @@
 
 A Python client for Netflix.
 
+## Installation
+
+```
+pip install netflix
+```
+
 ## Documentation
 
 ### Netflix ID
