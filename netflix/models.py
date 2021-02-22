@@ -32,7 +32,7 @@ class Movie:
         response = requests.get(url)
         soup = BeautifulSoup(response.content, "html.parser")
         metadata_script_tag = soup.find("script", type="application/ld+json")
-        metadata = json.loads(metadata_script_tag.text)
+        metadata = json.loads(metadata_script_tag.string)
 
         # Be sure about content
         if not metadata["@type"] == "Movie":
